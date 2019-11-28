@@ -5,7 +5,6 @@ add_compile_options(-std=c++11 -Wall -Wextra)
 
 find_package(catkin REQUIRED COMPONENTS
   descartes_moveit
-  opw_kinematics
 )
 
 catkin_package(
@@ -15,7 +14,8 @@ catkin_package(
     ${PROJECT_NAME}
   CATKIN_DEPENDS
     descartes_moveit
-    opw_kinematics
+  DEPENDS
+    opw_kinematics::opw_kinematics
 )
 
 ###########
