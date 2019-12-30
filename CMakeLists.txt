@@ -7,6 +7,8 @@ find_package(catkin REQUIRED COMPONENTS
   descartes_moveit
 )
 
+find_package(opw_kinematics REQUIRED)
+
 catkin_package(
   INCLUDE_DIRS
     include
@@ -14,8 +16,6 @@ catkin_package(
     ${PROJECT_NAME}
   CATKIN_DEPENDS
     descartes_moveit
-  DEPENDS
-    opw_kinematics::opw_kinematics
 )
 
 ###########
@@ -35,6 +35,7 @@ add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EX
 
 target_link_libraries(${PROJECT_NAME}
   ${catkin_LIBRARIES}
+  opw_kinematics::opw_kinematics
 )
 
 #############
