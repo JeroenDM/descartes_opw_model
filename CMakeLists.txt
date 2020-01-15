@@ -7,6 +7,8 @@ find_package(catkin REQUIRED COMPONENTS
   descartes_moveit
 )
 
+find_package(opw_kinematics REQUIRED)
+
 catkin_package(
   INCLUDE_DIRS
     include
@@ -15,7 +17,6 @@ catkin_package(
   CATKIN_DEPENDS
     descartes_moveit
   DEPENDS
-    opw_kinematics::opw_kinematics
 )
 
 ###########
